@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* small animations for todo cards */
+@keyframes enterAnim {
+	from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+	to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes exitAnim {
+	from { opacity: 1; transform: translateY(0) scale(1); }
+	to { opacity: 0; transform: translateY(-8px) scale(0.98); }
+}
+.animate-enter { animation: enterAnim 240ms ease-out both; }
+.animate-exit { animation: exitAnim 240ms ease-in both; }
+
+/* ensure dark class is available for simple toggling */
+:root { color-scheme: light dark; }
+.dark { color-scheme: dark; }
