@@ -4,8 +4,8 @@ import axios from 'axios';
 import { FiPlus, FiSearch, FiSun, FiMoon } from 'react-icons/fi';
 import TodoItem from './components/TodoItem';
 
-// during local development point axios to backend server
-axios.defaults.baseURL = 'http://localhost:5000';
+// Use Vite env variable for API base URL (set VITE_API_URL in Vercel), fallback to localhost for dev
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 function App() {
 
